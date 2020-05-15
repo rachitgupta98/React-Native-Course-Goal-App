@@ -19,6 +19,9 @@ export default function App() {
     setInputState(e);
   };
   const onAddPress = () => {
+    if (inputState === "") {
+      return;
+    }
     setOutputList((input) => [
       ...input,
       { id: Math.random().toString(), value: inputState },
